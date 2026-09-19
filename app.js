@@ -353,3 +353,71 @@
   document.addEventListener('DOMContentLoaded',init);
 })();
 
+document.querySelectorAll(".qr-scanner-trigger").forEach(card => {
+
+    card.addEventListener("click", function () {
+        const pageName = this.dataset.pageLink;
+
+        if (!pageName) return;
+
+        // Find the matching page
+        const targetPage = document.getElementById(pageName);
+
+        if (targetPage) {
+            // Hide all pages
+            document.querySelectorAll(".page").forEach(page => {
+                page.classList.remove("active");
+            });
+
+            // Show selected page
+            targetPage.classList.add("active");
+
+            // Update navigation buttons if your app uses them
+            document.querySelectorAll("[data-page]").forEach(item => {
+                item.classList.remove("active");
+
+                if (item.dataset.page === pageName) {
+                    item.classList.add("active");
+                }
+            });
+
+            // Close quick modal if it exists
+            const quickModal = document.getElementById("quickModal");
+
+            if (quickModal) {
+                quickModal.classList.remove("active");
+            }
+
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        } else {
+            console.warn("Page not found:", pageName);
+        }
+    });
+
+
+    // Allow keyboard activation
+    card.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            this.click();
+        }
+    });
+
+});
+
+document.querySelectorAll(".qr-link").forEach(link => {
+    link.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const url = this.dataset.url;
+
+        if (url) {
+            window.location.href = url;
+        }
+    });
+});
