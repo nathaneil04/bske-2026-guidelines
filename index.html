@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0d6efd">
+  <meta name="description" content="BSKE 2026 Candidate Eligibility & Election Guide — a neutral civic-information reference for Philippine Barangay and Sangguniang Kabataan elections.">
+  <meta name="color-scheme" content="light">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/svg+xml" href="./assets/bske-logo.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>BSKE 2026 — Eligibility & Election Guide</title>
+</head>
+<body>
+  <div class="app-shell" id="appShell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><img src="./logo.png" alt="BSKE 2026 logo" class="mn-logo"></div>
+        <div>
+<div class="brand-name">
+    <span class="brand-b">B</span><span class="brand-sk">SK</span><span class="brand-e">E</span>
+    <span class="brand-year">2026</span>
+</div>      <small>KAISA KA!</small>
+        </div>
+      </div>
+
+      <button class="store-switcher" id="guideSwitcher" type="button" aria-expanded="false">
+        <span class="store-switcher-left"><i class="fa-solid fa-landmark"></i><span>Election Guide</span></span>
+        <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+      </button>
+      <div class="sidebar-store-menu" id="guideMenu" hidden>
+        <button type="button" data-page-link="dashboard"><i class="fa-solid fa-gauge"></i><span>Overview</span></button>
+        <button type="button" data-page-link="checker"><i class="fa-solid fa-circle-check"></i><span>Eligibility Checker</span></button>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <div class="nav-group">
+          <button class="nav-group-title" type="button" aria-expanded="true" aria-controls="overviewMenu">
+            <span class="nav-group-title-left"><i class="fa-solid fa-house"></i><span>Guide</span></span>
+            <i class="fa-solid fa-chevron-down nav-group-chevron"></i>
+          </button>
+          <div class="nav-submenu is-open" id="overviewMenu">
+            <button class="nav-item active" type="button" data-page="dashboard"><i class="fa-solid fa-chart-pie"></i><span>Overview</span></button>
+            <button class="nav-item" type="button" data-page="requirements"><i class="fa-solid fa-list-check"></i><span>Qualifications</span></button>
+            <button class="nav-item" type="button" data-page="kinship"><i class="fa-solid fa-people-arrows"></i><span>Kinship & Degrees</span></button>
+            <button class="nav-item" type="button" data-page="scenarios"><i class="fa-solid fa-diagram-project"></i><span>Case Scenarios</span></button>
+            <button class="nav-item" type="button" data-page="prohibited"><i class="fa-solid fa-ban"></i><span>Prohibited Acts</span></button>
+          </div>
+        </div>
+
+        <div class="nav-group">
+          <button class="nav-group-title" type="button" aria-expanded="true" aria-controls="filingMenu">
+            <span class="nav-group-title-left"><i class="fa-solid fa-file-signature"></i><span>Candidate Guide</span></span>
+            <i class="fa-solid fa-chevron-down nav-group-chevron"></i>
+          </button>
+          <div class="nav-submenu is-open" id="filingMenu">
+            <button class="nav-item" type="button" data-page="checker"><i class="fa-solid fa-circle-check"></i><span>Eligibility Checker</span></button>
+            <button class="nav-item" type="button" data-page="coc"><i class="fa-solid fa-file-circle-check"></i><span>COC Checklist</span></button>
+            <button class="nav-item" type="button" data-page="calendar"><i class="fa-solid fa-calendar-days"></i><span>2026 Calendar</span></button>
+            <button class="nav-item" type="button" data-page="prohibited"><i class="fa-solid fa-ban"></i><span>Prohibited Acts</span></button>
+          </div>
+        </div>
+
+        <div class="nav-group">
+          <button class="nav-group-title" type="button" aria-expanded="true" aria-controls="referenceMenu">
+            <span class="nav-group-title-left"><i class="fa-solid fa-book-open"></i><span>References</span></span>
+            <i class="fa-solid fa-chevron-down nav-group-chevron"></i>
+          </button>
+          <div class="nav-submenu is-open" id="referenceMenu">
+            <button class="nav-item" type="button" data-page="faq"><i class="fa-solid fa-circle-question"></i><span>FAQs</span></button>
+            <button class="nav-item" type="button" data-page="sources"><i class="fa-solid fa-scale-balanced"></i><span>Legal Sources</span></button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="nav-item" type="button" data-page="settings"><i class="fa-solid fa-gear"></i><span>Settings</span></button>
+        <div class="profile-mini">
+  <div class="avatar">
+    <img src="./comelec.svg" alt="Civic Guide Logo" class="profile-logo">
+  </div>
+          <div><strong>Civic Guide</strong><small>2026 reference</small></div>
+          <i class="fa-solid fa-shield-halved" title="Local-only data"></i>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+        <div class="mobile-brand"><div class="brand-mark small"><img src="./assets/bske-logo.svg" alt="BSKE 2026"></div><strong><span>BSKE</span> 2026</strong></div>
+        <div class="top-search"><i class="fa-solid fa-magnifying-glass"></i><input id="globalSearch" type="search" placeholder="Search rules, scenarios, FAQs..." aria-label="Search guide"></div>
+        <div class="top-actions">
+          <button class="icon-btn install-app-btn" id="installAppBtn" title="Install BSKE Guide" aria-label="Install BSKE Guide"><i class="fa-solid fa-download"></i></button>
+          <button class="icon-btn" id="quickAddBtn" title="Quick actions" aria-label="Quick actions"><i class="fa-solid fa-plus"></i></button>
+          <div class="notification-wrapper">
+            <button class="icon-btn notification" id="notifBtn" type="button" title="Notifications" aria-label="Notifications" aria-expanded="false">
+              <i class="fa-regular fa-bell"></i><span id="notificationBadge" class="notification-badge hidden">0</span>
+            </button>
+            <div class="notification-panel" id="notificationPanel" aria-hidden="true">
+              <div class="notification-head">
+                <div class="notification-title-area"><strong>Guide alerts</strong><span>Upcoming BSKE 2026 dates</span></div>
+                <button type="button" class="notification-read" id="markNotificationsRead">Mark all as read</button>
+              </div>
+              <div class="notification-list" id="notificationList"></div>
+              <div class="notification-footer"><button type="button" id="viewAllNotifications">View calendar</button></div>
+            </div>
+          </div>
+<button class="avatar top-avatar" id="topAvatar" type="button" title="Settings" aria-label="Settings">
+    <i class="fa-solid fa-gear"></i>
+</button>        </div>
+      </header>
+
+      <div class="content">
+        <!-- OVERVIEW -->
+        <section class="page active" id="page-dashboard">
+          <div class="page-head">
+            <div>
+              <p class="eyebrow" id="currentDate">LOADING DATE...</p>
+              <h1 id="greeting">BSKE 2026 Candidate Guide</h1>
+              <p class="muted">A neutral, source-based guide to qualifications, kinship rules, filing requirements, and key dates.</p>
+            </div>
+            <button class="primary-btn" data-page-link="checker"><i class="fa-solid fa-circle-check"></i> Check Eligibility</button>
+          </div>
+
+          <div class="hero-banner">
+            <div class="hero-copy">
+              <span class="hero-kicker"> CIVIC INFORMATION</span>
+              <h2>Know the rule before you file.</h2>
+              <p>The 2026 guide centers on the legal requirements that apply to Barangay and SK aspirants. The tools below explain the rules without endorsing or opposing any candidate.</p>
+              <div class="hero-actions">
+                <button class="primary-btn" data-page-link="scenarios"><i class="fa-solid fa-diagram-project"></i> Explore the case</button>
+                <button class="outline-btn" data-page-link="sources"><i class="fa-solid fa-link"></i> View official sources</button>
+              </div>
+            </div>
+            <div class="hero-date-card">
+              <span>Election Day</span><strong>November 2, 2026</strong><small id="countdownText">Loading countdown…</small>
+            </div>
+          </div>
+
+          <div class="stat-grid">
+            <article class="stat-card blue"><div class="stat-icon"><i class="fa-solid fa-calendar-day"></i></div><div><small>Election Day</small><strong>Nov 2, 2026</strong><span class="trend neutral">First Monday of November</span></div></article>
+            <article class="stat-card red"><div class="stat-icon"><i class="fa-solid fa-file-signature"></i></div><div><small>COC Filing</small><strong>Sep 28 – Oct 5</strong><span class="trend warn">Plan documents early</span></div></article>
+            <article class="stat-card yellow"><div class="stat-icon"><i class="fa-solid fa-cake-candles"></i></div><div><small>SK Age</small><strong>18–24</strong><span class="trend neutral">On election day</span></div></article>
+            <article class="stat-card navy"><div class="stat-icon"><i class="fa-solid fa-people-arrows"></i></div><div><small>Kinship Rule</small><strong>2nd degree</strong><span class="trend neutral">Incumbent official test</span></div></article>
+          </div>
+
+          <div class="dashboard-grid">
+            <article class="panel chart-panel">
+              <div class="panel-head"><div><h2>2026 Election Timeline</h2><p>Major public-facing milestones</p></div><button class="text-btn" data-page-link="calendar">Full calendar</button></div>
+              <div class="mini-timeline" id="miniTimeline"></div>
+            </article>
+            <article class="panel">
+              <div class="panel-head"><div><h2>Rule at a glance</h2><p>Central issue from the case study</p></div><span class="source-chip">RA 11768</span></div>
+              <div class="rule-callout"><div class="rule-icon"><i class="fa-solid fa-scale-balanced"></i></div><div><strong>Kinship is not assessed in isolation.</strong><p>Section 10 uses the relationship degree together with the status of the related official and the locality where the SK official seeks election.</p></div></div>
+              <button class="soft-link" data-page-link="kinship">Understand civil degrees <i class="fa-solid fa-arrow-right"></i></button>
+            </article>
+          </div>
+
+          <div class="dashboard-grid bottom">
+            <article class="panel">
+              <div class="panel-head"><div><h2>Quick tools</h2><p>Start with the question that matches your need.</p></div></div>
+              <div class="quick-grid guide-quick">
+                <button data-page-link="checker"><i class="fa-solid fa-circle-check"></i><span>Eligibility Checker</span></button>
+                <button data-page-link="kinship"><i class="fa-solid fa-people-arrows"></i><span>Civil Degree Tool</span></button>
+                <button data-page-link="coc"><i class="fa-solid fa-file-circle-check"></i><span>COC Checklist</span></button>
+                <button data-page-link="calendar"><i class="fa-solid fa-calendar-days"></i><span>Election Calendar</span></button>
+              </div>
+            </article>
+            <article class="panel">
+              <div class="panel-head"><div><h2>Source snapshot</h2><p>Official documents used by this guide</p></div><button class="text-btn" data-page-link="sources">Sources</button></div>
+              <div class="source-snapshot">
+                <div><i class="fa-solid fa-gavel"></i><span>RA 11768</span><small>SK qualifications</small></div>
+                <div><i class="fa-solid fa-calendar-check"></i><span>RA 12232</span><small>2026 election date</small></div>
+                <div><i class="fa-solid fa-file-signature"></i><span>COMELEC 11196</span><small>COC & SK age</small></div>
+                <div><i class="fa-solid fa-calendar-days"></i><span>COMELEC 11191</span><small>Election calendar</small></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- QUALIFICATIONS -->
+        <section class="page" id="page-requirements">
+          <div class="page-head"><div><p class="eyebrow">CANDIDATE RULES</p><h1>Candidate Qualifications</h1><p class="muted">Core requirements summarized from the cited statutes and COMELEC rules.</p></div><button class="outline-btn" data-page-link="sources"><i class="fa-solid fa-scale-balanced"></i> Legal basis</button></div>
+          <div class="info-tabs" role="tablist" aria-label="Positions"><button class="info-tab active" data-req-tab="sk" role="tab">SK Chairperson / Member</button><button class="info-tab" data-req-tab="barangay" role="tab">Barangay Positions</button></div>
+          <div id="requirementsContent"></div>
+          <div class="panel notice-panel"><i class="fa-solid fa-circle-info"></i><div><strong>How to use this page</strong><p>This is a plain-language summary, not a substitute for an official eligibility determination. Always check the latest COMELEC issuance and the complete facts of the applicant.</p></div></div>
+        </section>
+
+        <!-- KINSHIP -->
+        <section class="page" id="page-kinship">
+          <div class="page-head"><div><p class="eyebrow">RELATIONSHIP GUIDE</p><h1>Kinship & Civil Degrees</h1><p class="muted">Understand the relationship before applying the Section 10 kinship test.</p></div></div>
+          <div class="dashboard-grid kinship-layout">
+            <article class="panel">
+              <div class="panel-head"><div><h2>Civil Degree Tool</h2><p>Choose a relationship to see its common civil-law degree.</p></div></div>
+              <div class="degree-tool">
+                <label>Relationship<select id="relationSelect"><option value="parent">Parent / child</option><option value="grandparent">Grandparent / grandchild</option><option value="sibling">Brother / sister</option><option value="uncle">Uncle / aunt ↔ niece / nephew</option><option value="firstcousin">First cousin</option><option value="parentinlaw">Parent-in-law / child-in-law</option></select></label>
+                <div class="degree-result" id="degreeResult"></div>
+              </div>
+            </article>
+            <article class="panel family-panel">
+              <div class="panel-head"><div><h2>Relationship map</h2><p>Examples commonly used in civil-degree questions</p></div></div>
+              <div class="family-map">
+                <div class="family-node blue-node"><i class="fa-solid fa-person"></i><span>Parent</span><b>1st degree</b></div>
+                <div class="family-arrow">↓</div>
+                <div class="family-node yellow-node"><i class="fa-solid fa-people-arrows"></i><span>Grandparent</span><b>2nd degree</b></div>
+                <div class="family-arrow">↔</div>
+                <div class="family-node red-node"><i class="fa-solid fa-user-group"></i><span>Grandchild</span><b>2nd degree</b></div>
+              </div>
+            </article>
+          </div>
+          <div class="degree-grid" id="degreeCards"></div>
+          <div class="panel source-note"><i class="fa-solid fa-book"></i><div><strong>Legal concept</strong><p>The Civil Code computes degrees by generations in the direct line and by counting up to the common ancestor then down to the relative in the collateral line. The SK qualification rule in RA 11768 refers specifically to relationships within the second civil degree of consanguinity or affinity to covered incumbent elected officials.</p></div></div>
+        </section>
+
+        <!-- CASE SCENARIOS -->
+        <section class="page" id="page-scenarios">
+          <div class="page-head"><div><p class="eyebrow">CASE STUDY</p><h1>Case Scenarios</h1><p class="muted">The uploaded infographic is preserved here as the featured case, with a rule-by-rule breakdown.</p></div><button class="primary-btn" id="buildScenarioBtn"><i class="fa-solid fa-plus"></i> Build Scenario</button></div>
+          <article class="case-hero panel">
+            <div class="case-image-wrap"><img src="./assets/case-scenario-grandfather-grandson.jpg" alt="Infographic showing grandfather aspirant Barangay Captain and grandson aspirant SK Chairperson case" loading="lazy"></div>
+            <div class="case-copy">
+              <span class="source-chip red-chip">FEATURED CASE</span>
+              <h2>Grandfather = Barangay Captain aspirant<br>Grandson = SK Chairperson aspirant</h2>
+              <div class="case-pills"><span><i class="fa-solid fa-people-arrows"></i> 2nd-degree consanguinity</span><span><i class="fa-solid fa-location-dot"></i> Same barangay in the example</span><span><i class="fa-solid fa-user-clock"></i> Grandfather is an aspirant</span></div>
+              <div class="case-result neutral-result"><div class="result-icon"><i class="fa-solid fa-scale-balanced"></i></div><div><strong>The relationship is relevant, but Section 10's wording focuses on an incumbent elected official.</strong><p>In the depicted facts, the grandfather is described as an aspirant rather than an incumbent elected official. The kinship restriction should therefore not be treated as automatically triggered solely by that relationship/status combination. Other SK qualifications and election rules still apply.</p></div></div>
+              <button class="soft-link" data-page-link="checker">Run the same facts through the checker <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </article>
+          <div class="scenario-grid" id="scenarioGrid"></div>
+          <div class="panel scenario-disclaimer"><i class="fa-solid fa-triangle-exclamation"></i><p><strong>Important:</strong> A scenario tool is an educational aid. It cannot issue a formal COMELEC ruling or resolve disputed facts.</p></div>
+        </section>
+
+        <!-- PROHIBITED ACTS -->
+        <section class="page" id="page-prohibited">
+          <div class="page-head"><div><p class="eyebrow">ELECTION CONDUCT</p><h1>Selected Prohibited Acts</h1><p class="muted">High-level examples from the 2026 COMELEC calendar. This list is not exhaustive.</p></div><button class="outline-btn" data-page-link="sources"><i class="fa-solid fa-scale-balanced"></i> Source: 11191</button></div>
+          <div class="prohibited-grid" id="prohibitedGrid"></div>
+          <div class="panel notice-panel"><i class="fa-solid fa-triangle-exclamation"></i><div><strong>Timing matters</strong><p>COMELEC Resolution No. 11191 identifies different periods for prohibited acts. Campaigning, for example, is listed as a prohibited act from September 28 through October 21, while the official campaign period is October 22 through October 31, 2026.</p></div></div>
+        </section>
+
+        <!-- CHECKER -->
+        <section class="page" id="page-checker">
+          <div class="page-head"><div><p class="eyebrow">INTERACTIVE TOOL</p><h1>Eligibility Checker</h1><p class="muted">Answer the questions below for an informational rule check based on the 2026 materials included in this guide.</p></div><button class="outline-btn" id="resetChecker"><i class="fa-solid fa-rotate-left"></i> Reset</button></div>
+          <div class="checker-layout">
+            <article class="panel checker-card">
+              <div class="checker-progress"><div><span>Progress</span><strong id="checkerProgressText">0 / 8 answered</strong></div><div class="progress-track"><span id="checkerProgressBar"></span></div></div>
+              <form id="eligibilityForm">
+                <div class="form-section"><h3>1. Position & age</h3><label>Position<select id="ecPosition"><option value="sk">SK Chairperson / Member</option></select></label><label>Date of birth<input id="ecDob" type="date" required></label><p class="field-help">For the November 2, 2026 BSKE, COMELEC states SK aspirants should be born November 2, 2002 through November 2, 2008.</p></div>
+                <div class="form-section"><h3>2. Voter & residency</h3><div class="binary-grid"><label>Qualified Katipunan ng Kabataan voter<select id="ecVoter"><option value="">Select</option><option value="yes">Yes</option><option value="no">No</option></select></label><label>Resident of the barangay for at least 1 year before election day<select id="ecResident"><option value="">Select</option><option value="yes">Yes</option><option value="no">No</option></select></label></div></div>
+                <div class="form-section"><h3>3. Basic capacity</h3><div class="binary-grid"><label>Able to read and write Filipino, English, or the local dialect<select id="ecLiteracy"><option value="">Select</option><option value="yes">Yes</option><option value="no">No</option></select></label><label>Final conviction for a crime involving moral turpitude<select id="ecConviction"><option value="">Select</option><option value="no">No</option><option value="yes">Yes</option></select></label></div></div>
+                <div class="form-section"><h3>4. Relationship to a covered official</h3><label>Related within the second civil degree of consanguinity or affinity?<select id="ecRelated"><option value="">Select</option><option value="no">No</option><option value="yes">Yes</option></select></label><div id="relationshipDetails" class="relationship-details hidden"><div class="binary-grid"><label>Relationship<select id="ecRelation"><option value="parent">Parent / child — 1st degree</option><option value="grandparent">Grandparent / grandchild — 2nd degree</option><option value="sibling">Brother / sister — 2nd degree</option><option value="parentinlaw">Parent-in-law / child-in-law — 1st-degree affinity</option></select></label><label>Relative's status<select id="ecRelativeStatus"><option value="incumbent">Incumbent elected official</option><option value="aspirant">Aspirant / candidate</option><option value="former">Former official</option></select></label><label>Relative's office<select id="ecRelativeOffice"><option value="barangay">Barangay official</option><option value="municipal">Municipal official</option><option value="city">City official</option><option value="provincial">Provincial official</option><option value="regional">Regional official</option><option value="other">Other</option></select></label><label>Same locality where the SK candidate seeks election?<select id="ecSameLocality"><option value="yes">Yes</option><option value="no">No</option></select></label></div></div></div>
+                <div class="form-actions"><button class="primary-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Check these facts</button><button class="outline-btn" type="button" id="saveChecker"><i class="fa-regular fa-floppy-disk"></i> Save locally</button></div>
+              </form>
+            </article>
+            <aside class="panel checker-result-panel" id="checkerResultPanel"><div class="panel-head"><div><h2>Result</h2><p>Complete the form to generate a fact-based summary.</p></div><i class="fa-solid fa-scale-balanced result-panel-icon"></i></div><div id="checkerResult" class="checker-empty"><i class="fa-solid fa-clipboard-question"></i><p>No result yet</p><span>Your answers stay in this browser only.</span></div></aside>
+          </div>
+        </section>
+
+        <!-- COC -->
+        <section class="page" id="page-coc">
+          <div class="page-head"><div><p class="eyebrow">FILING GUIDE</p><h1>COC Checklist</h1><p class="muted">Track the document and timing items highlighted by COMELEC Resolution No. 11196.</p></div><button class="outline-btn" data-page-link="calendar"><i class="fa-solid fa-calendar"></i> Filing dates</button></div>
+          <div class="checklist-banner"><div><span>Checklist progress</span><strong id="cocProgressText">0%</strong></div><div class="progress-track large"><span id="cocProgressBar"></span></div><button class="text-btn" id="resetCoc">Reset checklist</button></div>
+          <div class="coc-grid" id="cocChecklist"></div>
+          <div class="dashboard-grid bottom">
+            <article class="panel highlight-card blue-highlight"><i class="fa-solid fa-circle-info"></i><div><strong>No filing fee</strong><p>COMELEC Resolution No. 11196 states that no filing fee or other fee shall be imposed for filing the COC.</p></div></article>
+            <article class="panel highlight-card yellow-highlight"><i class="fa-solid fa-file-circle-exclamation"></i><div><strong>Incomplete COC</strong><p>An incomplete COC is not accepted as filed on time; the resolution provides a last-day completion process for aspirants who are advised to complete their COC.</p></div></article>
+          </div>
+        </section>
+
+        <!-- CALENDAR -->
+        <section class="page" id="page-calendar">
+          <div class="page-head"><div><p class="eyebrow">NOVEMBER 2, 2026 BSKE</p><h1>Election Calendar</h1><p class="muted">Milestones from COMELEC Resolution No. 11191 and related 2026 issuances.</p></div><button class="primary-btn" id="printCalendar"><i class="fa-solid fa-print"></i> Print</button></div>
+          <div class="calendar-toolbar"><div class="search-field"><i class="fa-solid fa-magnifying-glass"></i><input id="calendarSearch" type="search" placeholder="Search calendar events..."></div><select id="calendarFilter"><option value="all">All events</option><option value="filing">Filing</option><option value="campaign">Campaign period</option><option value="election">Election</option><option value="other">Other</option></select></div>
+          <div class="calendar-list" id="calendarList"></div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="page" id="page-faq">
+          <div class="page-head"><div><p class="eyebrow">FREQUENT QUESTIONS</p><h1>FAQs</h1><p class="muted">Plain-language answers tied to the source documents in this guide.</p></div></div>
+          <div class="search-field faq-search"><i class="fa-solid fa-magnifying-glass"></i><input id="faqSearch" type="search" placeholder="Search questions..."></div>
+          <div class="faq-list" id="faqList"></div>
+        </section>
+
+        <!-- SOURCES -->
+        <section class="page" id="page-sources">
+          <div class="page-head"><div><p class="eyebrow">PRIMARY MATERIALS</p><h1>Legal Sources</h1><p class="muted">Official statutes and COMELEC issuances used in the guide.</p></div><span class="source-chip">Verified 2026 reference set</span></div>
+          <div class="source-grid" id="sourceGrid"></div>
+          <div class="panel citation-note"><i class="fa-solid fa-link"></i><div><strong>External links open the official source website.</strong><p>This website summarizes the cited materials. Source pages can change; verify current issuances with COMELEC before filing.</p></div></div>
+        </section>
+
+        <!-- SETTINGS -->
+        <section class="page" id="page-settings">
+          <div class="page-head"><div><p class="eyebrow">PREFERENCES</p><h1>Settings</h1><p class="muted">Control local display preferences. No account is required.</p></div></div>
+          <div class="settings-grid">
+            <div class="panel settings-card"><h2>Guide preferences</h2><label>Default landing page<select id="defaultPage"><option value="dashboard">Overview</option><option value="checker">Eligibility Checker</option><option value="calendar">2026 Calendar</option></select></label><label class="switch-row"><span>Show notifications</span><input id="prefNotifications" type="checkbox" checked><span class="switch"></span></label><label class="switch-row"><span>Save checker answers locally</span><input id="prefSave" type="checkbox" checked><span class="switch"></span></label><button class="primary-btn" id="saveSettings"><i class="fa-solid fa-floppy-disk"></i> Save settings</button></div>
+            <div class="panel settings-card"><h2>Data controls</h2><p class="muted settings-note">Saved data lives in your browser's local storage. This static site does not send checker answers to a server.</p><button class="outline-btn full" id="exportData"><i class="fa-solid fa-download"></i> Export local data</button><button class="outline-btn full danger-outline" id="clearData"><i class="fa-solid fa-trash"></i> Clear local data</button></div>
+          </div>
+          <div class="panel notice-panel"><i class="fa-solid fa-shield-halved"></i><div><strong>Educational-use notice</strong><p>This guide is a civic-information interface and does not make endorsements, campaign recommendations, or formal legal determinations.</p></div></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <nav class="bottom-nav" id="bottomNav">
+    <button class="bottom-item active" data-page="dashboard"><i class="fa-solid fa-house"></i><span>Home</span></button>
+    <button class="bottom-item" data-page="checker"><i class="fa-solid fa-circle-check"></i><span>Check</span></button>
+    <button class="bottom-item center" id="bottomQuick"><span><i class="fa-solid fa-plus"></i></span><small>Tools</small></button>
+    <button class="bottom-item" data-page="calendar"><i class="fa-solid fa-calendar-days"></i><span>Dates</span></button>
+    <button class="bottom-item" data-page="sources"><i class="fa-solid fa-scale-balanced"></i><span>Sources</span></button>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="modal" id="quickModal">
+    <div class="modal-head"><div><p class="eyebrow">QUICK ACTION</p><h2>Open a guide tool</h2></div><button class="icon-btn" data-close="quickModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button></div>
+    <div class="quick-modal-grid">
+      <button data-page-link="checker" data-close="quickModal"><i class="fa-solid fa-circle-check"></i><span>Eligibility Checker</span></button>
+      <button data-page-link="kinship" data-close="quickModal"><i class="fa-solid fa-people-arrows"></i><span>Civil Degree Tool</span></button>
+      <button data-page-link="coc" data-close="quickModal"><i class="fa-solid fa-file-signature"></i><span>COC Checklist</span></button>
+      <button data-page-link="calendar" data-close="quickModal"><i class="fa-solid fa-calendar-days"></i><span>2026 Calendar</span></button>
+    </div>
+  </div>
+  <div class="modal" id="scenarioModal">
+    <div class="modal-head"><div><p class="eyebrow">CUSTOM CASE</p><h2>Build a scenario</h2></div><button class="icon-btn" data-close="scenarioModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button></div>
+    <form id="scenarioForm">
+      <div class="form-grid"><label>Candidate position<select id="scPosition"><option>SK Chairperson</option><option>SK Member</option></select></label><label>Relative relationship<select id="scRelation"><option value="parent">Parent / child</option><option value="grandparent">Grandparent / grandchild</option><option value="sibling">Brother / sister</option><option value="parentinlaw">Parent-in-law / child-in-law</option><option value="firstcousin">First cousin</option></select></label><label>Relative status<select id="scStatus"><option value="incumbent">Incumbent elected official</option><option value="aspirant">Aspirant / candidate</option><option value="former">Former official</option></select></label><label>Relative office<select id="scOffice"><option>Barangay official</option><option>Municipal official</option><option>City official</option><option>Provincial official</option><option>Regional official</option><option>Other</option></select></label></div>
+      <label>Same locality where the candidate seeks election?<select id="scLocality"><option value="yes">Yes</option><option value="no">No</option></select></label>
+      <div class="modal-actions"><button type="button" class="outline-btn" data-close="scenarioModal">Cancel</button><button class="primary-btn" type="submit">Analyze facts</button></div>
+    </form>
+  </div>
+  <div class="toast" id="toast"><i class="fa-solid fa-circle-check"></i><span>Saved</span></div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
