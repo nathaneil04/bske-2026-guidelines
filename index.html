@@ -308,20 +308,64 @@
   <nav class="bottom-nav" id="bottomNav">
     <button class="bottom-item active" data-page="dashboard"><i class="fa-solid fa-house"></i><span>Home</span></button>
     <button class="bottom-item" data-page="checker"><i class="fa-solid fa-circle-check"></i><span>Check</span></button>
-    <button class="bottom-item center" id="bottomQuick"><span><i class="fa-solid fa-plus"></i></span><small>Tools</small></button>
-    <button class="bottom-item" data-page="calendar"><i class="fa-solid fa-calendar-days"></i><span>Dates</span></button>
+<button class="bottom-item center" id="bottomQuick"><span><i class="fa-solid fa-qrcode"></i></span><small>Scan QR</small></button>    <button class="bottom-item" data-page="calendar"><i class="fa-solid fa-calendar-days"></i><span>Dates</span></button>
     <button class="bottom-item" data-page="sources"><i class="fa-solid fa-scale-balanced"></i><span>Sources</span></button>
   </nav>
 
   <div class="overlay" id="overlay"></div>
   <div class="modal" id="quickModal">
-    <div class="modal-head"><div><p class="eyebrow">QUICK ACTION</p><h2>Open a guide tool</h2></div><button class="icon-btn" data-close="quickModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button></div>
+    <div class="modal-head"><div><p class="eyebrow">QR QUICK ACTION</p><h2>Scan the QR code to access your Certificate of Candidacy.</h2></div><button class="icon-btn" data-close="quickModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button></div>
     <div class="quick-modal-grid">
-      <button data-page-link="checker" data-close="quickModal"><i class="fa-solid fa-circle-check"></i><span>Eligibility Checker</span></button>
-      <button data-page-link="kinship" data-close="quickModal"><i class="fa-solid fa-people-arrows"></i><span>Civil Degree Tool</span></button>
-      <button data-page-link="coc" data-close="quickModal"><i class="fa-solid fa-file-signature"></i><span>COC Checklist</span></button>
-      <button data-page-link="calendar" data-close="quickModal"><i class="fa-solid fa-calendar-days"></i><span>2026 Calendar</span></button>
-    </div>
+      <!-- QR Code Scanners -->
+<div class="qr-scanner-grid">
+
+    <button type="button"
+        class="qr-scanner-trigger"
+        data-page-link="punongbarangay"
+        data-close="quickModal">
+
+    <img src="punongbarangay.png" alt="Punong Barangay">
+    <span class="qr-link" data-url="https://www.comelec.gov.ph/php-tpls-attachments/2026BSKE/Resolutions/com_res11196_annexK.pdf">
+        Punong Barangay
+    </span>
+</button>
+
+<button type="button"
+        class="qr-scanner-trigger"
+        data-page-link="sangguniangbarangaymember"
+        data-close="quickModal">
+
+    <img src="sangguniangbarangaymember.png" alt="Sangguniang Barangay Member">
+    <span class="qr-link" data-url="https://www.comelec.gov.ph/php-tpls-attachments/2026BSKE/Resolutions/com_res11196_annexK1.pdf">
+        Sangguniang Barangay Member
+    </span>
+</button>
+
+<button type="button"
+        class="qr-scanner-trigger"
+        data-page-link="skchairperson"
+        data-close="quickModal">
+
+    <img src="skchairperson.png" alt="SK Chairperson">
+    <span class="qr-link" data-url="https://www.comelec.gov.ph/php-tpls-attachments/2026BSKE/Resolutions/com_res11196_annexK2.pdf">
+        SK Chairperson
+    </span>
+</button>
+
+<button type="button"
+        class="qr-scanner-trigger"
+        data-page-link="skmember"
+        data-close="quickModal">
+
+    <img src="skmember.png" alt="SK Member">
+    <span class="qr-link" data-url="https://www.comelec.gov.ph/php-tpls-attachments/2026BSKE/Resolutions/com_res11196_annexK3.pdf">
+        SK Member
+    </span>
+</button>
+
+</div>
+
+</div> </div>
   </div>
   <div class="modal" id="scenarioModal">
     <div class="modal-head"><div><p class="eyebrow">CUSTOM CASE</p><h2>Build a scenario</h2></div><button class="icon-btn" data-close="scenarioModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button></div>
